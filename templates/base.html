@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+    <h1>{% block body1 %}{% endblock %}</h1>
+    <h2>{% block body2 %}{% endblock %}</h2>
+    <h2>{% block body3 %}{% endblock %}</h2>
+    <h2>{% block body4 %}{% endblock %}</h2>
+    <h2>{% block body5 %}{% endblock %}</h2>
+    <h2>{% block body6 %}{% endblock %}</h2>
+    <h2>
+        <div class="form-group">
+            <select name= colours method="GET" action="/">
+                {% for colour in colours %}
+                <option value= "{{colour}}" SELECTED>{{colour}}</option>"
+                {% endfor %}
+            </select>
+            <h3>These are my thoughts on <a href=blog/2020/dogs>dogs</a></h3>
+                {% if colour == 'AB * CH / 2' %}
+                    <div>{{ number }} - чётное</div>
+                {% else %}
+                    <div>{{ number }} - нечётное</div>
+                {% endif %}
+        </div>
+    </h2>
+<body>
+
+</body>
+</html>
